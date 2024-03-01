@@ -33,10 +33,10 @@ double sinn(double x, uint16_t count) {
     return res;
 }
 
-double cosn(double x, uint16_t count) {
+double cosn(double x, uint64_t count) {
     long double res = 0.0;
-    for (uint64_t i = 0; i < count; i++) {
-        res += pown(-1, i) * pown(x, 2 * i) / fact(2 * i);
+    for (uint16_t i = 0; i < count; i++) {
+        res += (pown(-1, i) * pown(x, 2 * i)) / fact(2 * i);
     }
     return res;
 }
