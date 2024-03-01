@@ -9,7 +9,7 @@ double pown(double value, uint16_t n) {
 uint64_t fact(uint16_t n) {
     if (n == 1)
         return 1;
-    else 
+    else
         return n * fact(n - 1);
 }
 
@@ -34,7 +34,7 @@ double sinn(double x, uint16_t count) {
 }
 
 double cosn(double x, uint16_t count) {
-    double res = 0;
+    double res = 1;
     for (uint64_t i = 0; i <= count; ++i) {
         res += (pown(-1, i) * pown(x, 2 * i - 1)) / fact(2 * i - 2);
     }
