@@ -36,12 +36,13 @@ double sinn(double x, uint16_t count) {
 double cosn(double x, uint16_t count) {
     double res = 1;
     for (int i = 1; i <= count; i++) {
-	    if (i % 2 == 1) {
-		    res -= (pown(x, 2 * i) / fact(2 * i));
-	    }
-	    else {
-		    res += (pown(x, 2 * i) / fact(2 * i));
-	    }
+        double term = (double)pow(x, 2 * i) / fact(2 * i);
+        if (i % 2 == 1) {
+            res -= term;
+        }
+        else {
+            res += term;
+        }
     }
     return res;
 }
