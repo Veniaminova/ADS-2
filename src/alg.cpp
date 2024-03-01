@@ -34,15 +34,13 @@ double sinn(double x, uint16_t count) {
 }
 
 double cosn(double x, uint16_t count) {
-    double result = 1;
+    double res = 0;
     for (int i = 1; i <= count; i++) {
-        double term = static_cast<double>pow(x, 2 * i) / fact(2 * i);
-        if (i % 2 == 1) {
-            result -= term;
-        }
-        else {
-            result += term;
+        if (i % 2 == 0) {
+            res -= pown(x, 2 * i - 2) / fact(2 * i - 2);
+        } else {
+            res += pown(x, 2 * i - 2) / fact(2 * i - 2);
         }
     }
-    return result;
+    return cos;
 }
