@@ -42,5 +42,5 @@ double cosn(double x, uint16_t count) {
             res += pown(x, 2 * i - 2) / fact(2 * i - 2);
         }
     }
-    return cos;
+    return res;
 }
