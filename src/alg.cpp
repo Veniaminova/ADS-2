@@ -36,7 +36,7 @@ double sinn(double x, uint16_t count) {
 double cosn(double x, uint16_t count) {
     double res = 1;
     for (uint64_t i = 0; i <= count; ++i) {
-        res += (pown(-1, i) * pown(x, 2 * i - 1)) / fact(2 * i - 2);
+        res += (pown(-1, i) * pown(x, 2 * i - 2)) / fact(2 * i - 2);
     }
     return res;
 }
