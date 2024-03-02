@@ -33,14 +33,11 @@ double sinn(double x, uint16_t count) {
     return res;
 }
 
+
 double cosn(double x, uint16_t count) {
     double res = 0;
-    for (int i = 1; i <= count; i++) {
-        if (i % 2 == 0) {
-            res -= pown(x, 2 * i - 2) / fact(2 * i - 2);
-        } else {
-            res += pown(x, 2 * i - 2) / fact(2 * i - 2);
-        }
+    for (int i = 0; i < count; i++) {
+        res += pow(-1, i) * pow(x, 2 * i) / tgamma(2 * i + 1);
     }
     return res;
 }
